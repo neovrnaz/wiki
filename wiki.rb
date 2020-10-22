@@ -42,4 +42,9 @@ class WikiApp < Sinatra::Base
     save_content(params['title'], params['content'])
     redirect CGI.escape("/#{params['title']}")
   end
+
+  put '/:title' do
+    save_content(params['title'], params['content'])
+    redirect CGI.escape("/#{params['title']}")
+  end
 end
