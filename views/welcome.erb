@@ -1,7 +1,9 @@
 <h1>Welcome to the Wiki-Web-App</h1>
 
-<form class="form-wrapper cf">
-  <input type="text" placeholder="Search here..." required>
+<form class="form-wrapper cf" method="get" action="<%= @title %>">
+  <label>
+    <input type="text" placeholder="Search here..." id="search">
+  </label>
   <button type="submit">Search</button>
 </form>
 

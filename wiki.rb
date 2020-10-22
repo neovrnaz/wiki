@@ -58,7 +58,7 @@ class WikiApp < Sinatra::Base
     redirect '/'
   end
 
-  post '/search' do
+  get '/search' do
     @post = Post.all(:title)
   end
 end
