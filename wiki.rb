@@ -40,11 +40,12 @@ class WikiApp < Sinatra::Base
 
   post '/create' do
     save_content(params['title'], params['content'])
-    redirect CGI.escape("/#{params['title']}")
+    # redirect URI.escape("/#{params['title']}")
+    redirect URI.encode_www_form([%w[/title title], %w[lang en]])
   end
 
   put '/:title' do
     save_content(params['title'], params['content'])
-    redirect CGI.escape("/#{params['title']}")
+    URI.encode_www_form([%w[/title title], %w[lang en]])
   end
 end
