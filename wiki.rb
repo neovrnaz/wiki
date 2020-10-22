@@ -1,13 +1,18 @@
 require 'sinatra'
 
-get('/apple') do
-  "<h1>Here's a jazz apple</h1>"
-end
+class WikiApp < Sinantra::Base
 
-get('/banana') do
-  "<h1>Here's a ripe banana</h1>"
-end
+  def page_content(title)
+    File.read("pages/#{title}.txt")
+  rescue Errno::ENOENT
+    return nil
+  end
 
-get('/carrot') do
-  "<h1>Here's a baby carrot</h1>"
+  get '/' do
+    erb :welcome
+  end
+
+  get '/:title' do
+    page_content(params[:title])
+  end
 end
