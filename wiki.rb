@@ -8,6 +8,12 @@ class WikiApp < Sinatra::Base
     return nil
   end
 
+  def save_content(title, content)
+    File.open("pages/#{title}.txt", 'w') do |file|
+      file.print(content)
+    end
+  end
+
   get '/' do
     erb :welcome
   end
