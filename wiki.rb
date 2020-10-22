@@ -1,6 +1,6 @@
 require 'sinatra'
 
-class WikiApp < Sinantra::Base
+class WikiApp < Sinatra::Base
 
   def page_content(title)
     File.read("pages/#{title}.txt")
@@ -13,6 +13,8 @@ class WikiApp < Sinantra::Base
   end
 
   get '/:title' do
-    page_content(params[:title])
+    @title = params[:title]
+    @content = page_content(@title)
+    erb :show
   end
 end
