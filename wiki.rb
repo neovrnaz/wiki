@@ -18,6 +18,10 @@ class WikiApp < Sinatra::Base
     end
   end
 
+  def delete_content(title)
+    File.delete("pages/#{title}.txt")
+  end
+
   get '/' do
     erb :welcome
   end
@@ -41,15 +45,16 @@ class WikiApp < Sinatra::Base
   post '/create' do
     save_content(params['title'], params['content'])
     # redirect URI.escape("/#{params['title']}")
-    redirect URI.encode_www_form([%w[/title title], %w[lang en]])
+    redirect URI.escape("/#{params['title']}")
   end
 
   put '/:title' do
     save_content(params['title'], params['content'])
-    URI.encode_www_form([%w[/title title], %w[lang en]])
+    redirect URI.escape("/#{params['title']}")
   end
 
-  def delete_content(title)
-    File.delete("pages/#{title}.txt")
+  delete '/:title' do
+    delete_content(params[:title])
+    redirect '/'
   end
 end
