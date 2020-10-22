@@ -2,7 +2,7 @@
 Read, create, and save pages for this wikipedia web application.
 
 * Users can add their own pages which others can view later
-* The app uses text files to dynamically add content and is saved to the project directory 
+* The app uses text files to dynamically add content which is saved to the project directory 
 * Users can add, read, delete and save pages for others to view
 * This is built using the Sinatra - A web application library used for creating web apps
 * This project demonstrates of a good understanding of HTTP requests

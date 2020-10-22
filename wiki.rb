@@ -48,4 +48,8 @@ class WikiApp < Sinatra::Base
     save_content(params['title'], params['content'])
     URI.encode_www_form([%w[/title title], %w[lang en]])
   end
+
+  def delete_content(title)
+    File.delete("pages/#{title}.txt")
+  end
 end
