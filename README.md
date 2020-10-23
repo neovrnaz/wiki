@@ -17,7 +17,6 @@ First, you can clone or download the files. Once in the directory, you can type 
 From the main menu, select **Run | Edit Configurations.**  
  
 Here is the configuration you will want to setup for the RubyMine IDE
-![Imgur](https://i.imgur.com/1fdLF9d.png)
 <img src="https://i.imgur.com/1fdLF9d.png" width="600"/>
 
 Alternatively, you can simply type the command shown below:
