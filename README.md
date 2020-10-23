@@ -1,11 +1,11 @@
-# wiki-web-app
+# Wiki
 Read, create, and save pages for this wikipedia web application.
 
 * Users can add their own pages which others can view later
 * Uses /pages directory to dynamically serve and update content
 * Users can add, read, delete and save pages for others to view
 * This is built using the Sinatra - A web application library used for creating web apps
-* This project demonstrates of a good understanding of HTTP requests
+* This project demonstrates of a good understanding of HTTP requests and MVC
 
 <p align="center">
   <img src="https://media.giphy.com/media/Gj0Rjh1qntLBYkUcwW/giphy.gif" width="600" alt="Sublime's custom image"/>
