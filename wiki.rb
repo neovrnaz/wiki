@@ -57,8 +57,4 @@ class WikiApp < Sinatra::Base
     delete_content(params[:title])
     redirect '/'
   end
-
-  get '/search' do
-    @post = Post.all(:title)
-  end
 end
