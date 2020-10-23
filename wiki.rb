@@ -9,7 +9,7 @@ class WikiApp < Sinatra::Base
   def page_content(title)
     File.read("pages/#{title}.txt")
   rescue Errno::ENOENT
-    return nil
+    nil
   end
 
   def save_content(title, content)

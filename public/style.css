@@ -58,7 +58,7 @@ p + div {
 
 .form {
   text-align: left;
-  width: 54%;
+  width: 70%;
   margin: 0 auto;
   background-color: #fff;
   padding: 50px;
@@ -99,4 +99,8 @@ textarea:focus {
 }
 
 /* Disable textarea resizing */
-textarea { resize: vertical; }
+textarea {
+  resize: vertical;
+  padding: 6px;
+  box-sizing: border-box;
+}
